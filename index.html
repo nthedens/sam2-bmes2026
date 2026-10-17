@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>BMES 2026 – Supplementary Video | Nicholas Thedens</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
+<style>
+  /* Dark surround is deliberate: grayscale MRI reads best on a dark field, as on a scanner console. */
+  :root {
+    --field: #191c22;
+    --panel: #22262e;
+    --ink: #ecebe6;
+    --muted: #a9adb5;
+    --gold: #fdd21f;      /* same yellow as the poster header */
+    --line: #343944;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-padding-top: 1rem; }
+  body {
+    margin: 0;
+    background: var(--field);
+    color: var(--ink);
+    font-family: "Source Serif 4", "Times New Roman", Times, serif;
+    font-size: 1.0625rem;
+    line-height: 1.6;
+    padding: env(safe-area-inset-top, 0px) 0 env(safe-area-inset-bottom, 0px);
+  }
+  header {
+    border-top: 6px solid var(--gold);
+    padding: 2rem 1.25rem 1.5rem;
+    max-width: 60rem;
+    margin: 0 auto;
+  }
+  .venue { color: var(--gold); font-weight: 600; margin: 0 0 .5rem; }
+  h1 { font-size: clamp(1.35rem, 3.6vw, 2rem); line-height: 1.25; margin: 0 0 .75rem; font-weight: 700; }
+  .authors { color: var(--muted); margin: 0; font-size: .95rem; }
+  main { max-width: 60rem; margin: 0 auto; padding: 0 1.25rem 3rem; }
+  section {
+    border-top: 1px solid var(--line);
+    padding: 2rem 0 1rem;
+  }
+  h2 { font-size: 1.25rem; margin: 0 0 .25rem; }
+  .caption { color: var(--muted); margin: 0 0 1rem; max-width: 70ch; }
+  .frame { background: #000; border: 1px solid var(--line); }
+  video {
+    display: block;
+    width: 100%;
+    height: auto;
+    background: #000;
+    image-rendering: pixelated;   /* keep MRI pixels crisp if the browser scales them */
+  }
+  .meta { display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; margin-top: .75rem; font-size: .95rem; }
+  a { color: var(--gold); text-underline-offset: 3px; }
+  a:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+  footer { max-width: 60rem; margin: 0 auto; padding: 1.5rem 1.25rem 2.5rem; color: var(--muted); font-size: .9rem; border-top: 1px solid var(--line); }
+</style>
+</head>
+<body>
+<header>
+  <p class="venue">BMES 2026 Annual Meeting, Orlando</p>
+  <h1>Image Phenotyping of Upper-Airway Collapse in Obstructive Sleep Apnea Using the Segment Anything Model (SAM2)</h1>
+  <p class="authors">Nicholas Thedens, Md Shahin Ali, Junjie Liu, Douglas J. Van Daele, Sarah E. Gerard, Sajan Goud Lingala</p>
+</header>
+
+<main>
+  <section id="video">
+    <h2>Supplementary Video</h2>
+    <p class="caption">Video segmentation of OSA patient's oropharynx during natural sleep .</p>
+    <div class="frame">
+      <video controls playsinline preload="metadata" controlslist="nodownload" disablepictureinpicture oncontextmenu="return false;" src="video.mp4">
+        Your browser can’t play this video.
+      </video>
+    </div>
+  </section>
+</main>
+
+<footer>
+  QDMRI Lab, Roy J Carver Department of Biomedical Engineering, University of Iowa.
+  Supported by NIH NHLBI R01 HL173483.
+</footer>
+</body>
+</html>
